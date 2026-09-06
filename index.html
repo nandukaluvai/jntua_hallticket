@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hall Ticket Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1>🎓 Hall Ticket Generator</h1>
+
+        <p class="subtitle">
+            Enter the student and examination details
+        </p>
+
+
+        <!-- COLLEGE DETAILS -->
+
+        <div class="section">
+
+            <h2>College / Examination Details</h2>
+
+            <label>College / University Name</label>
+            <input
+                type="text"
+                id="collegeName"
+                placeholder="Enter College / University Name"
+            >
+
+            <label>Location</label>
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter Location"
+            >
+
+            <label>Department / School</label>
+            <input
+                type="text"
+                id="department"
+                placeholder="Enter Department / School"
+            >
+
+            <label>Examination Name</label>
+            <input
+                type="text"
+                id="examName"
+                placeholder="Example: B.Tech Degree Examination"
+            >
+
+            <label>Exam Month & Year</label>
+            <input
+                type="text"
+                id="examMonth"
+                placeholder="Example: September 2026"
+            >
+
+            <label>Hall Ticket Number</label>
+            <input
+                type="text"
+                id="hallTicketNumber"
+                placeholder="Enter Hall Ticket Number"
+            >
+
+        </div>
+
+
+        <!-- STUDENT DETAILS -->
+
+        <div class="section">
+
+            <h2>Student Details</h2>
+
+            <label>Examination Centre</label>
+            <textarea
+                id="examCenter"
+                placeholder="Enter Examination Centre"
+            ></textarea>
+
+            <label>Admission / Register Number</label>
+            <input
+                type="text"
+                id="registerNumber"
+                placeholder="Enter Admission / Register Number"
+            >
+
+            <label>Student Name</label>
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter Student Name"
+            >
+
+            <label>Branch of Study</label>
+            <input
+                type="text"
+                id="branch"
+                placeholder="Example: Computer Science and Engineering"
+            >
+
+        </div>
+
+
+        <!-- PHOTO -->
+
+        <div class="section">
+
+            <h2>Student Photo</h2>
+
+            <label>Upload Student Photograph</label>
+
+            <input
+                type="file"
+                id="studentPhoto"
+                accept="image/*"
+            >
+
+        </div>
+
+
+        <!-- SIGNATURE -->
+
+        <div class="section">
+
+            <h2>Student Signature</h2>
+
+            <label>Upload Student Signature</label>
+
+            <input
+                type="file"
+                id="studentSignature"
+                accept="image/*"
+            >
+
+        </div>
+
+
+        <!-- EXAMINATION SUBJECTS -->
+
+        <div class="section">
+
+            <h2>Examination Details</h2>
+
+            <div id="examRows">
+
+                <div class="exam-row">
+
+                    <input
+                        type="date"
+                        class="examDate"
+                    >
+
+                    <input
+                        type="text"
+                        class="examDay"
+                        placeholder="Day"
+                    >
+
+                    <input
+                        type="text"
+                        class="session"
+                        placeholder="Session"
+                    >
+
+                    <input
+                        type="text"
+                        class="subCode"
+                        placeholder="Subcode"
+                    >
+
+                    <input
+                        type="text"
+                        class="subject"
+                        placeholder="Subject"
+                    >
+
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="add-button"
+                onclick="addExamRow()"
+            >
+                + Add Another Exam
+            </button>
+
+        </div>
+
+
+        <!-- SIGNATURES -->
+
+        <div class="section">
+
+            <h2>Authority Details</h2>
+
+            <label>Chief Superintendent Name</label>
+
+            <input
+                type="text"
+                id="superintendent"
+                placeholder="Enter Name"
+            >
+
+            <label>Controller of Examinations</label>
+
+            <input
+                type="text"
+                id="controller"
+                placeholder="Enter Name"
+            >
+
+        </div>
+
+
+        <!-- INSTRUCTIONS -->
+
+        <div class="section">
+
+            <h2>Instructions</h2>
+
+            <textarea
+                id="instructions"
+                rows="6"
+                placeholder="Enter examination instructions..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- GENERATE -->
+
+        <button
+            type="button"
+            class="generate-button"
+            onclick="generateHallTicket()"
+        >
+            GENERATE HALL TICKET
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
